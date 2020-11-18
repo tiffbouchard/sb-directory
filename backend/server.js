@@ -1,22 +1,31 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
-const app = express();
-require('./database');
+const logger = require('morgan');
+const favicon = require('serve-favicon')
 
-app.use(bodyParser.json());
+const app = express();
+
+require('dotenv').config();
+require('./config/database');
+
+app.use(logger("dev"));
+app.use(express.json());
 app.use(cors());
 
-const users = require('/api/users');
-app.use('/api/users', users);
+app.use(favicon(path.join(__dirname, '../build', 'favicon.ico')));
+app.use(express.static(path.join(__dirname, '../build')));
 
-app.use(express.static(path.join(__dirname, '../build')))
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../build'))
+// app.use("/api/profiles", require("./routes/api/profiles"));
+
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../build', 'index.html'))
 })
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3001;
+
+
 app.listen(port, () => {
-  console.log(`Server stated on port ${port}`);
+  console.log(`Server started on port ${port}`);
 });

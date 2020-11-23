@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Header(props) {
   return (
     <div>
-      <Link to="/">SMOL</Link>
+      <Link to="/">INDY</Link>
       <Link to="/category/fashion">Fashion</Link>
       <Link to="/category/lifestyle">Lifestyle</Link>
       <Link to="/category/health-wellness">Health & Wellness</Link>
@@ -12,7 +12,9 @@ export default function Header(props) {
       <Link to="/category/home">Home</Link>
       <Link to="/login">Log in</Link>
       <Link to="/signup">Sign Up</Link>
-      <Link to="/logout">Log out</Link>
+      <Link to="/logout" onClick={() => {
+        props.handleLogout();
+      }}>Log out</Link>
       <Link to="/profile">Profile</Link>
     </div>
   )

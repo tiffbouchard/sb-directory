@@ -24,6 +24,7 @@ class SignupForm extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(e)
     // if (this.validateUsername()) {
     //   console.log("hi");
     // }

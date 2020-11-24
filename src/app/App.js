@@ -10,12 +10,13 @@ import LoginPage from "../pages/LoginPage/LoginPage";
 import HomePage from "../pages/HomePage/HomePage";
 // import DetailPage from "../../pages/DetailPage/DetailPage";
 // import ProfilePage from "../../pages/ProfilePage/Profile";
-// import NewPostPage from "../NewPostPage/NewPostPage";
+import NewListingPage from "../pages/NewListingPage/NewListingPage";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      user: null,
       // profile: profileService.getProfile(),
       // allPosts: [],
       // currentPost: [],
@@ -35,11 +36,11 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <UserProvider>
+      <UserProvider>
+        <div id="page-container">
           <Header
             handleLogout={this.handleLogout}
-            // user={this.state.user}
+            user={this.state.user}
             // allListings={this.state.allListings}
           />
           <Switch>
@@ -71,10 +72,20 @@ class App extends Component {
                 />
               )}
             />
+            <Route
+              exact
+              path="/new-listing"
+              render={({ history }) => (
+                <NewListingPage
+                  history={history}
+                  handleSignupOrLogin={this.handleSignupOrLogin}
+                />
+              )}
+            />
           </Switch>
           <Footer />
+        </div>
         </UserProvider>
-      </div>
     );
   }
 }

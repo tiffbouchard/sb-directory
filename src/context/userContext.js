@@ -7,6 +7,7 @@ class UserProvider extends React.Component {
   state = {
     user: userService.getUser(),
   };
+
   render() {
     return (
       <UserContext.Provider value={{ ...this.state }}>

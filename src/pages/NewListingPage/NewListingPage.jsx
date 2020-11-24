@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
-import LoginForm from "../../components/LoginForm/LoginForm"
+import NewListingForm from "../../components/NewListingForm/NewListingForm"
 
-class LoginPage extends Component {
+class NewListingPage extends Component {
   constructor(props) {
     super(props);
     this.state = { message: "" };
@@ -15,15 +15,15 @@ class LoginPage extends Component {
 
   render() {
     return (
-      <section className="LoginForm">
-        <LoginForm
+      <div className="NewListingForm">
+        <NewListingForm
           {...this.props}
           // updateMessage={this.updateMessage}
         />
         {/* <p>{this.state.message}</p> */}
-      </section>
+      </div>
     );
   }
 }
 
-export default LoginPage;
+export default NewListingPage;

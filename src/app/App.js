@@ -8,6 +8,7 @@ import Footer from "../components/Footer/Footer";
 import SignupPage from "../pages/SignupPage/SignupPage";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import HomePage from "../pages/HomePage/HomePage";
+import MePage from "../pages/MePage/MePage"
 // import DetailPage from "../../pages/DetailPage/DetailPage";
 // import ProfilePage from "../../pages/ProfilePage/Profile";
 import NewListingPage from "../pages/NewListingPage/NewListingPage";
@@ -16,7 +17,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: null,
+      user: userService.getUser(),
       // profile: profileService.getProfile(),
       // allPosts: [],
       // currentPost: [],
@@ -78,7 +79,16 @@ class App extends Component {
               render={({ history }) => (
                 <NewListingPage
                   history={history}
-                  handleSignupOrLogin={this.handleSignupOrLogin}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/:username"
+              render={(props) => (
+                <MePage
+                  {...props}
+                  user={this.state.user}
                 />
               )}
             />

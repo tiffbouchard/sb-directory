@@ -8,7 +8,7 @@ export default function Footer(props) {
   return (
   <section>
     <Articles/>
-    <Favourites/>
+    <Favourites whosfaves="our"/>
   </section>
   )
 }

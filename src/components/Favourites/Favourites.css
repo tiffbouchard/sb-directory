@@ -1,6 +1,7 @@
 .favourites-container {
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 .favourites {
@@ -36,7 +37,6 @@
 
 .favourites nav ul li:hover {
     background-color: #ededed;
-    transition: 0.5s;
 }
 
 .favourites nav ul li:nth-of-type(1) {
@@ -60,12 +60,216 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
+    margin: 20px 20px;
 }
 
-.image-boxes div {
-    height: 250px;
-    width: 250px;
+.image-boxes .box {
+    height: 275px;
+    width: 275px;
     border: 1px solid black;
-    margin: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    transition: 0.2s;
 }
+
+.image-boxes .box img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    cursor:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAPCAMAAAAxmgQeAAAACVBMVEX///8AAAD///9+749PAAAAAXRSTlMAQObYZgAAAD5JREFUGNN1j9EKADAIAnP//9GjFq6w7iU4DNRsB06cb44TJ+UzYUcniqnqoA6ag/62JhjKIU0rxx1lKveuXJ5UAQs/G/2vAAAAAElFTkSuQmCC),auto;
+}
+
+.descriptor {
+    display: flex;
+    justify-content: center;
+    background-color: #ededed;
+    padding: 10px;
+    margin: 10px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 15px;
+}
+
+
+@media only screen and (max-width: 1300px) {
+    .image-boxes .box {
+        height: 250px;
+        width: 250px;
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .image-boxes .box {
+        height: 220px;
+        width: 220px;
+    }
+  }
+
+  @media only screen and (max-width: 1085px) {
+    .image-boxes .box {
+        height: 200px;
+        width: 200px;
+    }
+  }
+
+  
+  @media only screen and (max-width: 1020px) {
+      .image-boxes .box {
+          height: 190px;
+          width: 190px;
+        }
+    }
+
+    @media only screen and (max-width: 984px) {
+        .image-boxes .box {
+            height: 180px;
+            width: 180px;
+        }
+      }
+    
+
+  @media only screen and (max-width: 910px) {
+    .image-boxes .box {
+        height: 360px;
+        width: 360px;
+    }
+  }
+
+  @media only screen and (max-width: 902px) {
+    .image-boxes .box {
+        height: 350px;
+        width: 350px;
+    }
+  }
+
+  @media only screen and (max-width: 897px) {
+    .image-boxes .box {
+        height: 340px;
+        width: 340px;
+    }
+  }
+
+  @media only screen and (max-width: 885px) {
+    .image-boxes .box {
+        height: 330px;
+        width: 330px;
+    }
+  }
+
+  @media only screen and (max-width: 870px) {
+    .image-boxes .box {
+        height: 320px;
+        width: 320px;
+    }
+  }
+
+
+  @media only screen and (max-width: 800px) {
+    .image-boxes .box {
+        height: 290px;
+        width: 290px;
+    }
+  }
+
+
+  @media only screen and (max-width: 770px) {
+    .image-boxes .box {
+        height: 270px;
+        width: 270px;
+    }
+  }
+
+
+
+  @media only screen and (max-width: 730px) {
+    .image-boxes .box {
+        height: 250px;
+        width: 250px;
+    }
+  }
+
+
+
+  @media only screen and (max-width: 691px) {
+    .image-boxes .box {
+        height: 230px;
+        width: 230px;
+    }
+  }
+
+
+
+  @media only screen and (max-width: 640px) {
+    .image-boxes .box {
+        height: 220px;
+        width: 220px;
+    }
+  }
+
+
+  @media only screen and (max-width: 620px) {
+    .image-boxes .box {
+        height: 210px;
+        width: 210px;
+    }
+  }
+
+
+  @media only screen and (max-width: 612px) {
+    .image-boxes .box {
+        height: 200px;
+        width: 200px;
+    }
+  }
+
+
+  @media only screen and (max-width: 588px) {
+    .image-boxes .box {
+        height: 190px;
+        width: 190px;
+    }
+  }
+
+
+  @media only screen and (max-width: 570px) {
+    .image-boxes .box {
+        height: 180px;
+        width: 180px;
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    .image-boxes .box {
+        height: 100px;
+        width: 400px;
+    }
+  }
+
+  @media only screen and (max-width: 463px) {
+    .image-boxes .box {
+        height: 100px;
+        width: 85vw;
+    }
+  }
+
+
+  /* @media only screen and (max-width: 550px) {
+    .image-boxes .box {
+        height: 300px;
+        width: 300px;
+        margin-right: 20px;
+    }
+    .image-boxes .box img {
+        height: 300px;
+        width: 300px;
+    }
+    .image-boxes.slide-track {
+        flex-wrap: nowrap;
+        display: flex;
+        scroll-behavior: smooth;
+    }
+    .slider {
+        width: 100%;
+        overflow: auto;
+    }
+  } */

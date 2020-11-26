@@ -7,7 +7,7 @@ import "./Header.css"
 export default function Header(props) {  
   let userInfo = props.user ? (
     <>
-    <Link>me</Link>
+    <Link to={`/${props.user.username}`}>me</Link>
     <Link className="logout btn" onClick={() => {
       props.handleLogout();
     }}>log out</Link>

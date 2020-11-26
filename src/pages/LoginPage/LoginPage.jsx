@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import LoginForm from "../../components/LoginForm/LoginForm"
 
+import "./LoginPage.css"
+
 class LoginPage extends Component {
   constructor(props) {
     super(props);
@@ -16,6 +18,7 @@ class LoginPage extends Component {
   render() {
     return (
       <section className="LoginForm">
+        <h3>Log In</h3>
         <LoginForm
           {...this.props}
           // updateMessage={this.updateMessage}

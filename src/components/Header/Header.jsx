@@ -28,6 +28,7 @@ export default function Header(props) {
         <div className="navlinks">
           <Link>browse</Link>
           <Link>read</Link>
+          <Link>submit</Link>
           {/* <Link to="/new-listing">add listing</Link> */}
           {userInfo}
         </div>

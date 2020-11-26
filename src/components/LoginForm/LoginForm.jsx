@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 // import "./LoginForm.css";
 import userService from "../../utils/userService";
 
+import "./LoginForm.css"
+
 class LoginForm extends Component {
   state = {
     email: "",

@@ -8,10 +8,13 @@ import Footer from "../components/Footer/Footer";
 import SignupPage from "../pages/SignupPage/SignupPage";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import HomePage from "../pages/HomePage/HomePage";
-import MePage from "../pages/MePage/MePage"
+import MePage from "../pages/MePage/MePage";
+import SubmitPage from "../pages/SubmitPage/SubmitPage";
+// import ReadPage from "../pages/ReadPage/ReadPage";
+// import BrowsePage from "../pages/BrowsePage/BrowsePage";
 // import DetailPage from "../../pages/DetailPage/DetailPage";
-// import ProfilePage from "../../pages/ProfilePage/Profile";
 import NewListingPage from "../pages/NewListingPage/NewListingPage";
+import ScrollingBanner from "../components/ScrollingBanner/ScrollingBanner"
 
 class App extends Component {
   constructor(props) {
@@ -39,6 +42,7 @@ class App extends Component {
     return (
       <UserProvider>
         <div id="page-container">
+          <ScrollingBanner/>
           <Header
             handleLogout={this.handleLogout}
             user={this.state.user}
@@ -79,6 +83,36 @@ class App extends Component {
               render={({ history }) => (
                 <NewListingPage
                   history={history}
+                />
+              )}
+            />
+             <Route
+              exact
+              path="/read"
+              render={(props) => (
+                <SubmitPage
+                  {...props}
+                  user={this.state.user}
+                />
+              )}
+            />
+             <Route
+              exact
+              path="/browse"
+              render={(props) => (
+                <SubmitPage
+                  {...props}
+                  user={this.state.user}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/contribute"
+              render={(props) => (
+                <SubmitPage
+                  {...props}
+                  user={this.state.user}
                 />
               )}
             />

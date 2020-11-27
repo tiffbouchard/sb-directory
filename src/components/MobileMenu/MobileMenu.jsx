@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 // import { UserContext } from "../../context/userContext"
 
-import "./Header.css"
+import "./MobileMenu.css"
 
 export default function Header(props) {  
   let userInfo = props.user ? (

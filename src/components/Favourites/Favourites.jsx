@@ -22,7 +22,7 @@ export default function Favourites(props) {
               <Link to="/">
                 <img src="https://cdn.shopify.com/s/files/1/0603/2741/articles/cocokind-skincare_1024x1024.png?v=1557985165"/>
               </Link>
-              <div className="descriptor">outdoor voices</div>
+              <div className="descriptor">outdoor voicesvoice svoicesvoices voicesv</div>
             </div>
             <div className="box">
               <Link to="/">

@@ -10,7 +10,7 @@ export default function Footer(props) {
         <ul>
           <li>About</li>
           <li>Contact</li>
-          <li>Read</li>
+          <li>Feedback</li>
         </ul>
       </div>
       <div className="link-container">

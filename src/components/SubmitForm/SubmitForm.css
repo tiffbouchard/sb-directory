@@ -1,16 +1,19 @@
 .submit-form-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
-input, button, textarea {
+input, button, textarea, select {
     border: solid 1px black;
     margin: 5px;
     padding: 5px;
     height: 20px;
     width: 300px;
+}
+
+select {
+    height: 100%;
 }
 
 textarea {

@@ -14,7 +14,8 @@ import SubmitPage from "../pages/SubmitPage/SubmitPage";
 // import BrowsePage from "../pages/BrowsePage/BrowsePage";
 // import DetailPage from "../../pages/DetailPage/DetailPage";
 import NewListingPage from "../pages/NewListingPage/NewListingPage";
-import ScrollingBanner from "../components/ScrollingBanner/ScrollingBanner"
+import ScrollingBanner from "../components/ScrollingBanner/ScrollingBanner";
+import InstagramFeed from "../components/InstagramFeed/InstagramFeed"
 
 class App extends Component {
   constructor(props) {
@@ -127,6 +128,7 @@ class App extends Component {
               )}
             />
           </Switch>
+          <InstagramFeed/>
           <Footer />
         </div>
         </UserProvider>

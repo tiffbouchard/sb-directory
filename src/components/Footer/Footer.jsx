@@ -7,6 +7,13 @@ export default function Footer(props) {
   return (
     <footer>
       <div>
+        <ul>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Read</li>
+        </ul>
+      </div>
+      <div className="link-container">
         <div>
           <h3>Fashion</h3>
           <ul>
@@ -36,7 +43,9 @@ export default function Footer(props) {
           </ul>
         </div>
       </div>
-      <p>Copyright 2020</p>
+      <div>
+        <p>Copyright 2020</p>
+      </div>
     </footer>
   )
 }
